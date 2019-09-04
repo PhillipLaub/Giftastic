@@ -3,7 +3,7 @@ var array = ["Rick and Morty", "Star Wars", "Final Fantasy", "Call of Duty", "Ba
 var cutOffRating = "PG-13";
 
 
-function showContainer(search){
+function mainContainer(search){
 	$.ajax({
         //API Key = 572FQQ5mZQxt5r5sJc15vOfze3FVTOyf
 		url: "https://api.giphy.com/v1/gifs/search?q=" + search + 
@@ -19,9 +19,11 @@ function showContainer(search){
             
 			var newImage = $("<img src = '" + element.images.fixed_height_still.url + "'>");
 			newImage.addClass("gif-image");
+
 			newImage.attr("state", "still");
 			newImage.attr("still-data", element.images.fixed_height_still.url);
 			newImage.attr("animated-data", element.images.fixed_height.url);
+
 			newDiv.append(newImage);
 			$("#gif-container").append(newDiv);
 		});
@@ -44,10 +46,12 @@ function showContainer(search){
 }
 
 function makeButtons(){
-	for(var i = 0; i < array.length; i++) {
+	for(let i = 0; i < array.length; i++) {
 		var newButton = $("<button>");
+
 		newButton.addClass("btn");
 		newButton.addClass("addtlButton");
+
 		newButton.text(array[i]);
 		$("#button-container").append(newButton);
     }
@@ -57,8 +61,7 @@ function makeButtons(){
 	$(".addtlButton").on("click", function(){
 		$(".gif-image").unbind("click");
 		$("#gif-container").empty();
-		$("#gif-container").removeClass("border1");
-		showContainer($(this).text());
+		mainContainer($(this).text());
 	});
 
 }
