@@ -1,5 +1,5 @@
-# GiftasticWhat the project does
--Why the project is useful
+# Giftastic
+-What it does, and why the project is useful
 
 This project allows the user to pull 10 gifs from the Giphy API. The gifs will go still, or animate with a click from the user. The user can also add additional buttons to search for gifs of their choosing. This project helps with the understanding of using and accessing APIs and dynamically creating elements.
 
