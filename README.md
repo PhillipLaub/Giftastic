@@ -13,4 +13,4 @@ I referenced the jquery website, previous projects and excercises, youtube, stac
 
 -Who maintains and contributes to the project
 
-This project is maintained and contributer by Phillip Laub
+This project is maintained and contributed by Phillip Laub
