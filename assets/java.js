@@ -1,4 +1,4 @@
-var array = ["Rick and Morty", "Star Wars", "Final Fantasy", "Call of Duty", "Batman", " The Flash", "Marvel Comics", "Playstation", "Breaking Bad", "Dragonball Z", "GOTG"];
+var array = ["Rick and Morty", "Star Wars", "Final Fantasy", "Call of Duty", "GOTG", "The Flash", "Marvel Comics", "Playstation", "Breaking Bad", "Dragonball Z", "Batman"];
 
 var cutOffRating = "PG-13";
 
@@ -7,14 +7,14 @@ function mainContainer(search){
 	$.ajax({
         //API Key = 572FQQ5mZQxt5r5sJc15vOfze3FVTOyf
 		url: "https://api.giphy.com/v1/gifs/search?q=" + search + 
-		"&api_key=572FQQ5mZQxt5r5sJc15vOfze3FVTOyf&rating=" + cutOffRating + "&limit=10",
+		"&api_key=572FQQ5mZQxt5r5sJc15vOfze3FVTOyf&rating=" + cutOffRating + "&limit=12",
         method: "GET"
         
 	}).then(function(response){
 		response.data.forEach(function(element){
 
 			newDiv = $("<div>");
-			newDiv.addClass("individual-gif-container");
+			newDiv.addClass("individual-gif-container col-md-4");
             newDiv.append("<p>Rating: " + element.rating.toUpperCase() + "</p>");
             
 			var newImage = $("<img src = '" + element.images.fixed_height_still.url + "'>");

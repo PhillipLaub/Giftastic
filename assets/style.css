@@ -1,29 +1,28 @@
-
-
 body{
 	background: url("./images/bg1.png") no-repeat center center fixed;
     background-size: cover;
-    font-family: 'Lexend Tera', sans-serif;
-
+	font-family: 'Lexend Tera', sans-serif;
+	
+	  background-position: center center;
+	  background-repeat: no-repeat;
+	  background-attachment: fixed;
+	
+	  height:100vh;
 }
 
 h1{
-	font-size: 90px;
-	margin-top: 3px;
-	margin-bottom: 1px;
+	font-size: 475%;
+	margin:1%;
+	
 }
 
 .row{
-	margin-bottom: 4px;
-	margin-left: 3px;
-	margin-right: 3px;
+	margin:1%;
 }
 
 .btn{
-	font-size: 20px;
 	background-color: rgb(66, 66, 238);
 	color: white;
-	padding: 3px;
 	opacity: 0.9;
 }
 
@@ -34,7 +33,7 @@ h1{
 
 
 .addtlButton{
-	margin: 4px;
+	margin: 0.5%;
 }
 
 h1 {
@@ -43,7 +42,8 @@ h1 {
 
 .border1{
     border: 13px inset rgba(164,30,20,0.8);
-    border-radius: 20px;
+	border-radius: 20px;
+	padding:0.5%;
 }
 
 .buttonheader{
@@ -53,13 +53,12 @@ h1 {
 }
 
 .gif-image{
-	margin-top: 1px;
-	margin-bottom: 1px;
+	margin:0.2%;
+	width:100%;
 }
 
 .individual-gif-container{
-	float: left;
-	margin: 5px;
+	text-align:center;
 }
 
 #submit{
@@ -68,7 +67,7 @@ h1 {
 
 #new-btn{
 	margin-top: 2px;
-	width: 100%;
+	width:100%;
 }
 
 
@@ -77,7 +76,6 @@ h1 {
 }
 
 .glow {
-    font-size: 80px;
     color: #fff;
     text-align: center;
     -webkit-animation: glow 2s ease-in-out infinite alternate;
